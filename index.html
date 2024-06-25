@@ -115,6 +115,11 @@
               });
             };
 
+      window.onbeforeunload = () => {
+        unityInstance.SendMessage(GameManager, CloseCallback);
+        return "Are you sure to leave this page?";
+      }
+
       document.body.appendChild(script);
 
     </script>
