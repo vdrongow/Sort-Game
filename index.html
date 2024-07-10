@@ -18,7 +18,6 @@
       </div>
       <div id="unity-warning"> </div>
       <div id="unity-footer">
-        <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
         <div id="unity-build-title">Master-Project</div>
       </div>
@@ -74,9 +73,9 @@
       // Set this to false if you want to decouple this synchronization from
       // happening inside the engine, and you would instead like to size up
       // the canvas DOM size and WebGL render target sizes yourself.
-      // config.matchWebGLToCanvasSize = false;
+      config.matchWebGLToCanvasSize = false;
 
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+      /*if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         // Mobile device style: fill the whole browser client area with the game canvas:
 
         var meta = document.createElement('meta');
@@ -96,7 +95,10 @@
 
         canvas.style.width = "1280px";
         canvas.style.height = "720px";
-      }
+      }*/
+
+      canvas.style.width = "1280px";
+      canvas.style.height = "720px";
 
       canvas.style.background = "url('" + buildUrl + "/WebBuild.jpg') center / cover";
       loadingBar.style.display = "block";
